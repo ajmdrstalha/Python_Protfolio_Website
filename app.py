@@ -26,7 +26,8 @@ image2 = Image.open("images/project2.png")
 st.subheader("Welcome to my portfolio")
 st.title("AJ MD RS TALHA")
 st.write("DevOps Engineer")
-st.write("[LinkedIn >](https://www.linkedin.com/in/ajmdrstalha/)")
+url = "https://www.linkedin.com/in/ajmdrstalha/"
+st.write("Check out my [Linkedin](%s)" % url)
 
 #------About Section ----
 with st.container():
@@ -53,29 +54,31 @@ with st.container():
     st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(image1, caption="Project 1 Image")
+        st.image(image1, caption="")
 
     with text_column:
-        st.subheader("Project 1")
+        st.subheader("OLT Auto Command")
         st.write(
             """
-             Discover how to automate OLT configuration with Python and Streamlit, all wrapped up in a Docker container to minimize manual errors and save you precious time
+             Discover how to automate OLT power checks command with Python and Streamlit, all wrapped up in a Docker container to minimize manual errors and save you precious time.
             """
         )
-        st.markdown("[GitHub Link >](https://github.com/ajmdrstalha/Epon-Command-Generator)")
+        st.markdown("[GitHub](https://github.com/ajmdrstalha/Epon-Command-Generator)")
+        
+        
     
     st.write("##")
     image_column, text_column = st.columns((1, 2))
     with image_column:
-        st.image(image2, caption="Project 2 Image")
+        st.image(image2, caption="")
 
     with text_column:
-        st.subheader("Project 2")
+        st.subheader("Networking Project")
         st.write(
             """
               Configured Cisco routers and switches with VLANs, inter-VLAN routing, EtherChannel, and STP load-balancing. 
               Secured the network using port security and SSH, and optimized IP addressing through SLSM, VLSM, and other techniques.
             """
         )    
-        st.markdown("[File Link >](https://drive.google.com/drive/folders/1NzzuxnJufYZXCIGWM7CDsw-z65xyFdAR)")
+        st.markdown("[File](https://drive.google.com/drive/folders/1NzzuxnJufYZXCIGWM7CDsw-z65xyFdAR)")
   
