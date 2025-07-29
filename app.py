@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from PIL import Image
 
-st.set_page_config(page_title="MY PORTFOLIO", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="AJ MD. RS TALHA")
 
 def load_lottie_url(url: str):
     try:
