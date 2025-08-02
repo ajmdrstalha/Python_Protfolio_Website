@@ -25,7 +25,7 @@ jobs:
           whoami
           hostname
           ls -la /home/ubuntu
-          cd /home/ubuntu/Python_Protfolio_Website   # or wherever your repo is cloned
+          cd /home/ubuntu/Python_Protfolio_Website   # wherever your repo is cloned
           git pull origin main
           docker build -t myapp .
           docker stop ajmdrstalha-portfolio || true
