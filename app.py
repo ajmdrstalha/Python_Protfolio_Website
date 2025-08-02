@@ -25,7 +25,7 @@ image2 = Image.open("images/project2.png")
 # ----- Header Section ----
 st.subheader("Welcome to my portfolio")
 st.title("AJ MD RS TALHA")
-st.write("DevOps Engineer")
+st.write("DevOps & Network Automation Engineer")
 url = "https://www.linkedin.com/in/ajmdrstalha/"
 st.write("Check out my [Linkedin](%s)" % url)
 
