@@ -21,6 +21,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          echo "SSH connection successful!"
           whoami
           hostname
           ls -la /home/ubuntu
