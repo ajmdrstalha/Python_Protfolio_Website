@@ -1,4 +1,4 @@
-name: Deploy Docker App to EC2
+name: Deploy py_portfolio With CI/CD
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy via SSH
+    name: Deploy to EC2
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,7 @@ jobs:
     - name: Deploy to EC2 using SSH
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: 23.20.236.45
+        host: ${{ secrets.EC2_HOST }}
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
@@ -27,7 +27,7 @@ jobs:
           ls -la /home/ubuntu
           cd /home/ubuntu/Python_Protfolio_Website   # wherever your repo is cloned
           git pull origin main
-          docker build -t myapp .
+          docker build -t py_portfolio:v1.0.0 .
           docker stop ajmdrstalha-portfolio || true
           docker rm ajmdrstalha-portfolio || true
-          docker run -d -p 9001:8501 --name ajmdrstalha-portfolio myapp
+          docker run -d -p 9001:8501 --name ajmdrstalha-portfolio py_portfolio:v1.0.0
