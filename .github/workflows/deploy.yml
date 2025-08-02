@@ -21,6 +21,9 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
+          whoami
+          hostname
+          ls -la /home/ubuntu
           cd /home/ubuntu/Python_Protfolio_Website   # or wherever your repo is cloned
           git pull origin main
           docker build -t myapp .
