@@ -27,6 +27,7 @@ jobs:
           ls -la /home/ubuntu
           cd /home/ubuntu/Python_Protfolio_Website   # wherever your repo is cloned
           git pull origin main
+          docker rmi py_portfolio:v1.0.0 || true
           docker build -t py_portfolio:v1.0.0 .
           docker stop ajmdrstalha-portfolio || true
           docker rm ajmdrstalha-portfolio || true

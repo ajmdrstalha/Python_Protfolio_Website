@@ -21,6 +21,7 @@ def load_lottie_url(url: str):
 
 # Updated working Lottie link
 lottie_coding = load_lottie_url("https://assets2.lottiefiles.com/packages/lf20_0yfsb3a1.json")
+lottie_contact = load_lottie_url("https://lottie.host/5dabaff6-7ed5-40ef-b15e-c8d7603d8fec/4oObtAepCE.json")
 #image upload for project 1
 image1 = Image.open("images/project1.png")
 #image upload for project 2
@@ -30,7 +31,7 @@ image2 = Image.open("images/project2.png")
 # ----- Header Section ----
 st.subheader("Welcome to my portfolio")
 st.title("AJ MD RS TALHA")
-st.write("DevOps & Network Automation Engineer")
+st.write("DevOps & Automation Engineer")
 
 
 # ----- Load CSS for Bootstrap Icons ----
@@ -49,7 +50,7 @@ st.markdown(
 # LinkedIn icon with hyperlink
 st.markdown(
     f"""
-    <div style="display: flex; gap: 920px; align-items: center;">
+    <div style="display: flex; gap: 24px; align-items: center;">
         <p>
             <a href="{linkedin_url}" target="_blank" style="text-decoration: none;">
                 <i class="bi bi-linkedin" style="font-size: 20px; color: #0A66C2;"></i>
@@ -66,8 +67,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# ----- Streamlit Style ----
 
 
 # ----- Option Menu ----
@@ -164,3 +163,21 @@ if selected == "Projects":
         )    
         st.markdown("[File](https://drive.google.com/drive/folders/1NzzuxnJufYZXCIGWM7CDsw-z65xyFdAR)")
   
+#----- Contact Section ----
+if selected == "Contact":
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write("##")
+        st.markdown(
+            """
+            <div style="position: relative; left: 100px; top: 10px;">
+            <span style="font-size: 28px; font-weight: bold;">Contact Me</span>
+            </div>
+            <div style="position: relative; left: 100px; top: 10px;">
+                E-mail: <a href="mailto:ajmdrstalha@gmail.com">ajmdrstalha@gmail.com</a>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+    with col2:
+        st_lottie(lottie_contact, height=300, key="contact")
