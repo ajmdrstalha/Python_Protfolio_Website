@@ -172,11 +172,9 @@ if selected == "Contact":
         st.header("Contact Me")
         st.markdown(
             """
-            Email: <a href="mailto:ajmdrstalha@gmail.com">ajmdrstalha@gmail.com</a>
+            Email: <a href="mailto:ajmdrstalha@gmail.com"></a>
             """,
             unsafe_allow_html=True
         )
-
-
     with col2:
         st_lottie(lottie_contact, height=300, key="contact")
