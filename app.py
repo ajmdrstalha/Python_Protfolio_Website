@@ -177,4 +177,4 @@ if selected == "Contact":
             unsafe_allow_html=True
         )
     with col2:
-        st_lottie(lottie_contact, height=301, key="contact")
+        st_lottie(lottie_contact, height=350, key="contact")
