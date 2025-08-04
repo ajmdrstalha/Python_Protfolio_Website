@@ -118,13 +118,13 @@ if selected == "Skills":
     )
     st.markdown(
         """
-        -<ul>Soft Skills</ul>
         <ul style="list-style: none; padding-left: 0;">
             <li>- Problem Solving</li>
             <li>- Team Collaboration</li>
             <li>- Communication</li>
             <li>- Adaptability</li>
             <li>- Time Management</li>
+        </ul>
         """,
         unsafe_allow_html=True
     )
@@ -175,5 +175,13 @@ if selected == "Contact":
             """,
             unsafe_allow_html=True
         )
+    st.subheader("Contact Me")
+    st.markdown(
+        """
+        E-mail: <a href="mailto:ajmdrstalha@gmail.com">ajmdrstalha@gmail.com</a>
+        """,
+        unsafe_allow_html=True
+    )
+
     with col2:
         st_lottie(lottie_contact, height=300, key="contact")
