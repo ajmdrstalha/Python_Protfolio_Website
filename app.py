@@ -168,14 +168,10 @@ if selected == "Contact":
     col1, col2 = st.columns(2)
     with col1:
         st.write("##")
+        st.header("Contact Me")
         st.markdown(
             """
-            <div style="position: relative; left: 100px; top: 10px;">
-            <span style="font-size: 28px; font-weight: bold;">Contact Me</span>
-            </div>
-            <div style="position: relative; left: 100px; top: 10px;">
-                E-mail: <a href="mailto:ajmdrstalha@gmail.com">ajmdrstalha@gmail.com</a>
-            </div>
+            Email: <a href="mailto:ajmdrstalha@gmail.com">ajmdrstalha@gmail.com</a>
             """,
             unsafe_allow_html=True
         )
