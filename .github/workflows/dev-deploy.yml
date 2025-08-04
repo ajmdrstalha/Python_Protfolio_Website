@@ -1,0 +1,26 @@
+name: Dev Deploy
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    
+    - name: Set up docker buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build and run Docker image
+      run: |
+        docker build -t ajmdrstalha/py_portfolio:dev .
+        docker run -d -p 8000:8501 ajmdrstalha/py_portfolio:dev
+
+        echo "Deployment completed successfully!"
+    - name: Check Streamlit app running
+      run: |
+        curl -f http://localhost:8000 || echo "Streamlit app is not running as expected" && exit 1 
