@@ -33,3 +33,5 @@ jobs:
             git log -n 5 --oneline
             docker build -t py_portfolio:v1.0.0 .
             docker run -d -p 9001:8501 --name ajmdrstalha-portfolio py_portfolio:v1.0.0
+            docker images prune -f
+          echo "Deployment to EC2 completed!"
